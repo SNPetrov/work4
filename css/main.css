@@ -1,0 +1,438 @@
+@font-face {
+    font-family: Marguaritas-Regular;
+    src: url("../fonts/Marguaritas.ttf");
+}
+
+@font-face {
+    font-family: Nunito-ExtraBold;
+    src: url("../fonts/Nunito-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: Nunito-SemiBold;
+    src: url("../fonts/Nunito-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: Nunito-Bold;
+    src: url("../fonts/Nunito-Bold.ttf");
+}
+@font-face {
+    font-family: Nunito-Regular;
+    src: url("../fonts/Nunito-Regular.ttf");
+}
+
+#header {
+    background-image: url("../images/header-bg.png");
+    font-family: "Nunito-SemiBold", serif;
+    background-size: cover;
+}
+
+#header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#header #header-menu {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-menu .menu-item {
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(44, 5, 38);
+    border-bottom: 1px solid transparent;
+    font-family: "Nunito-SemiBold", serif;
+}
+
+#header-menu .menu-item.active {
+    font-family: "Nunito-ExtraBold", serif;
+    border-bottom: 1px solid #721163;
+    color: #721163;
+}
+
+#header-menu .menu-item:hover {
+    border-bottom: 1px solid #721163;
+    color: #721163;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 145px;
+    margin-left: 145px;
+    margin-right: 400px;
+}
+
+.logo {
+    font-size: 55px;
+    font-family: "Marguaritas-Regular", serif;
+    color: rgb(67, 6, 57);
+}
+
+.logo-container .logo-text {
+    font-size: 10px;
+    color: rgb(67, 6, 57);
+    text-transform: uppercase;
+}
+
+.number {
+    font-size: 14px;
+    color: rgb(44, 5, 38);
+}
+
+
+#main {
+    background-image: url("../images/main-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#location {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 165px 0 280px 0;
+}
+
+#location-container {
+    max-width: 485px;
+}
+
+#location #location-title {
+    font-size: 36px;
+    color: rgb(67, 6, 57);
+    font-family: "Nunito-Bold", serif;
+    line-height: 0.95;
+}
+
+#location .logo {
+    display: inline-block;
+    font-size: 70px;
+}
+
+#location #location-text {
+    font-size: 20px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.25;
+    margin: 40px 0;
+}
+
+.btn {
+    background-color: rgb(114, 17, 99);
+    font-size: 16px;
+    font-family: "Nunito-SemiBold", serif;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+#select-program .btn {
+    width: 260px;
+    padding: 18px 0;
+}
+
+#advantages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#advantages-container .block-title {
+    margin-bottom: 95px;
+    margin-top: 160px;
+}
+
+.block-title {
+    font-size: 30px;
+    font-family: "Nunito-Bold", serif;
+    color: rgb(67, 6, 57);
+}
+
+
+#advantages .advantage {
+    margin-bottom: 80px;
+    margin-left: 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#advantages .advantage:nth-child(1) {
+    max-width: 425px;
+    margin-right: 164px;
+}
+
+#advantages .advantage:nth-child(2) {
+    max-width: 425px;
+}
+
+#advantages .advantage:nth-child(3) {
+    max-width: 414px;
+    margin-left: 122px;
+    margin-right: 190px;
+}
+
+#advantages .advantage:nth-child(4) {
+    max-width: 350px;
+}
+
+#advantages .advantage:nth-child(1) .advantage-text {
+    max-width: 276px;
+    margin-left: 60px;
+}
+
+#advantages .advantage:nth-child(2) .advantage-text {
+    max-width: 284px;
+    margin-left: 65px;
+}
+
+#advantages .advantage:nth-child(3) .advantage-text {
+    max-width: 284px;
+    margin-left: 60px;
+}
+
+#advantages .advantage:nth-child(4) .advantage-text {
+    max-width: 211px;
+    margin-left: 48px;
+}
+
+#advantages .advantage .advantage-image {
+    position: relative;
+    display: inline-block;
+}
+
+#advantages .advantage .advantage-text {
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.2;
+}
+
+#advantages .advantage .advantage-image .advantage-bg {
+    position: absolute;
+    z-index: -1;
+    left: -26px;
+    top: -14px;
+}
+
+#advantages .advantage:nth-child(2) .advantage-bg {
+    top: -13px;
+    left: -39px;
+}
+
+#advantages .advantage:nth-child(3) .advantage-bg {
+    top: -18px;
+    left: -26px;
+}
+
+#advantages .advantage:nth-child(4) .advantage-bg {
+    top: -20px;
+    left: -16px;
+}
+
+#rituals {
+    padding-top: 120px;
+    padding-bottom: 115px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#rituals #rituals-text {
+    margin: 30px 0 45px 0;
+    max-width: 539px;
+}
+
+.block-text {
+    font-size: 16px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.313;
+}
+
+#rituals #rituals-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rituals .rituals-card {
+    border-radius: 8px;
+    background-color: rgb(250, 247, 250);
+    box-shadow: 0 2px 16.56px 1.44px rgba(44, 5, 38, 0.1);
+    width: 282px;
+}
+
+#rituals .rituals-block {
+    padding: 28px 17px 30px 20px;
+    box-sizing: border-box;
+}
+
+#rituals .rituals-title {
+    font-size: 16px;
+    font-family: "Nunito-Bold", serif;
+    color: rgb(44, 5, 38);
+    margin-bottom: 15px;
+}
+
+#rituals .rituals-text {
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.357;
+    text-align: left;
+    height: 92px;
+}
+
+#rituals .rituals-time {
+    font-size: 12px;
+    font-family: "Nunito-SemiBold", serif;
+    color: rgb(114, 17, 99);
+    margin: 20px 0;
+}
+
+#rituals .rituals-sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rituals .rituals-price {
+}
+
+.rituals-button .btn {
+    width: 130px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+#page {
+    background-color: #f5f4f3;
+    background-image: url("../images/2girls.png");
+    background-position: top center;
+}
+
+#page #page-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 162px 0 210px 0;
+}
+
+#page #page-paragraph {
+    font-size: 18px;
+    font-family: "Nunito-SemiBold", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.167;
+    max-width: 345px;
+    padding: 20px 0 30px;
+}
+
+#page #page-btn .btn {
+    padding: 13px 0;
+    width: 232px;
+}
+
+#info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 0 80px 0;
+}
+
+#info #info-text {
+    max-width: 512px;
+    padding: 20px 0 43px;
+}
+
+#info .info-group-persons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#info .info-person {
+    position: relative;
+
+}
+
+#info .info-person img {
+
+}
+
+#info .info-person-text {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.749;
+    position: absolute;
+    width: 251px;
+    height: 70px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 16px;
+}
+
+#info .info-person-name {
+    font-size: 18px;
+    font-family: "Nunito-Bold", serif;
+    color: rgb(44, 5, 38);
+    margin-left: 20px;
+}
+
+#info .info-person-experience {
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    margin-left: 20px;
+}
+
+#info #info-persons-nav {
+    display: flex;
+    max-width: 80px;
+    justify-content: space-between;
+    margin: 35px auto 0 auto;
+    align-items: center;
+}
+
+#info img.arrow {
+    height: 15px;
+    cursor: pointer;
+}
+
+#info #info-persons-nav #info-person-numbers .info-person-number {
+    width: 10px !important;
+}
+
+#info #info-persons-nav #info-person-numbers div {
+    font-size: 18px;
+    font-family: "Nunito-Regular", serif;
+    color: rgba(114, 17, 99, 0.702);
+    line-height: 1.2;
+}
+
+#info #info-persons-nav #info-person-numbers div.active, #info #info-persons-nav #info-person-numbers div:hover {
+    font-family: "Nunito-Bold", serif;
+    color: #721163;
+    cursor: pointer;
+}
+.slick-track {
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+}
+
+#info #info-persons-nav #info-person-numbers .info-person-number.slick-current {
+    font-family: "Nunito-Bold", serif;
+    color: #721163;
+    width: 10px;
+}
+
+.slick-slide, .slick-slide *{ outline: none !important; }
