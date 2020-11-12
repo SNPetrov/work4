@@ -488,3 +488,7 @@
     width: 17px !important;
     height: 17px !important;
 }
+
+#gallery-photos-items .gallery-photos-item:hover {
+    cursor: pointer;
+}
