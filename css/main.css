@@ -492,3 +492,12 @@
 #gallery-photos-items .gallery-photos-item:hover {
     cursor: pointer;
 }
+#gallery .gallery-photo img{
+    transition: transform 0.8s;
+    border-radius: 10px;
+}
+
+#gallery .gallery-photo img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
