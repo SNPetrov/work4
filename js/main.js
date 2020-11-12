@@ -4,8 +4,8 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '#info-person-numbers',
-        nextArrow: $('#next-arrow'),
-        prevArrow: $('#prev-arrow')
+        nextArrow: $('#info .next-arrow'),
+        prevArrow: $('#info .prev-arrow')
     });
     $('#info-person-numbers').slick({
         slidesToShow: 2,
@@ -16,4 +16,12 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true
     });
+    $('#gallery-photos').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        nextArrow: $('#gallery .next-arrow'),
+        prevArrow: $('#gallery .prev-arrow')
+    });
+
 });

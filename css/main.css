@@ -436,3 +436,32 @@
 }
 
 .slick-slide, .slick-slide *{ outline: none !important; }
+
+#gallery {
+    padding-top: 15px;
+    padding-bottom: 110px;
+}
+
+#gallery-text {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#gallery #gallery-paragraph {
+    max-width: 670px;
+    padding: 20px 0 43px;
+}
+
+#gallery #gallery-photos {
+    display: flex;
+}
+
+#gallery #gallery-photos .gallery-photo {
+    margin: 0 12px !important;
+    width: 385px !important;
+}
+
+#gallery img.arrow {
+    height: 17px;
+    cursor: pointer;
+}
