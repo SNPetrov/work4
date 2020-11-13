@@ -38,5 +38,12 @@ $(document).ready(function () {
         $('.gallery-photos-item.slick-slide.slick-current').attr('src','images/active.gallery.png');
         $('.gallery-photos-item.slick-slide.slick-current').addClass('active');
     });
+    $('.gallery-photo').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        image: {
+            verticalFit: false
+        }
+    });
 
 });
