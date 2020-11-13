@@ -16,13 +16,14 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true
     });
-    $('#gallery-photos').slick({
+    let gallery_photos = $('#gallery-photos');
+    gallery_photos.slick({
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        asNavFor: '#gallery-photos-items',
         nextArrow: $('#gallery .next-arrow'),
         prevArrow: $('#gallery .prev-arrow'),
-        asNavFor: '#gallery-photos-items',
     });
     $('#gallery-photos-items').slick({
         slidesToShow: 10,
@@ -33,10 +34,9 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true
     });
-    $('.gallery-photos-item.slick-slide, #gallery .next-arrow,#gallery .prev-arrow').click(()=>{
-        $('.gallery-photos-item.slick-slide.active').attr('src','images/passive.png');
-        $('.gallery-photos-item.slick-slide.slick-current').attr('src','images/active.gallery.png');
-        $('.gallery-photos-item.slick-slide.slick-current').addClass('active');
+    gallery_photos.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        $('.gallery-photos-item.slick-slide.active').attr('src', 'images/passive.png');
+        $($('.gallery-photos-item.slick-slide.slick-current').attr('src', 'images/active.gallery.png')).addClass('active');
     });
     $('.gallery-photo').magnificPopup({
         type: 'image',
