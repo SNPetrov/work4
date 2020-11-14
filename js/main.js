@@ -24,13 +24,22 @@ $(document).ready(function () {
     //     }
     // });
     $("#questions-accordion").accordion();
-    $('.owl-carousel').owlCarousel({
+    let owl = $('.owl-carousel');
+    owl.owlCarousel({
         center: true,
         items:1,
         loop:true,
         autoWidth: true,
         margin:20,
-        nav: true,
-        dots: false
+        dots:false
     });
+    $('#gallery-photos-nav #prev').click(()=>{
+        owl.trigger('prev.owl.carousel', [300]);
+    });
+    $('#gallery-photos-nav #next').click(()=>{
+        owl.trigger('next.owl.carousel', [300]);
+    });
+    owl.on('changed.owl.carousel', function(event) {
+
+    })
 });

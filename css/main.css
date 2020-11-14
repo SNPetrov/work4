@@ -17,6 +17,7 @@
     font-family: Nunito-Bold;
     src: url("../fonts/Nunito-Bold.ttf");
 }
+
 @font-face {
     font-family: Nunito-Regular;
     src: url("../fonts/Nunito-Regular.ttf");
@@ -426,6 +427,7 @@
     color: #721163;
     cursor: pointer;
 }
+
 .slick-track {
     display: flex;
     width: 50px;
@@ -438,7 +440,9 @@
     width: 10px;
 }
 
-.slick-slide, .slick-slide *{ outline: none !important; }
+.slick-slide, .slick-slide * {
+    outline: none !important;
+}
 
 #gallery {
     padding-top: 15px;
@@ -469,15 +473,37 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
 .owl-item,
-.owl-item.active.center + .owl-item.active + .owl-item.active
-{
+.owl-item.active.center + .owl-item.active + .owl-item.active {
     opacity: 0.5;
 }
 
-.owl-item.active
-{
+.owl-item.active {
     opacity: 1;
+}
+
+#gallery #gallery-photos-nav {
+    margin: 50px auto 0 auto;
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gallery #gallery-photos-nav > img {
+    height: 17px;
+    width: 8px;
+}
+
+#gallery #gallery-photos-nav > img:hover {
+    cursor: pointer;
+}
+
+#gallery #gallery-photos-items {
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #questions {
@@ -494,6 +520,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 #questions #questions-title {
     width: 100%;
     padding-top: 40px;
@@ -515,7 +542,7 @@
     line-height: 1.2;
 }
 
-#questions .questions-text .number{
+#questions .questions-text .number {
     color: #721163;
     font-family: "Nunito-Bold", serif;
 }
