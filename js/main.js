@@ -16,28 +16,6 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true
     });
-    let gallery_photos = $('#gallery-photos');
-    gallery_photos.slick({
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: '#gallery-photos-items',
-        nextArrow: $('#gallery .next-arrow'),
-        prevArrow: $('#gallery .prev-arrow'),
-    });
-    $('#gallery-photos-items').slick({
-        slidesToShow: 10,
-        slidesToScroll: 10,
-        asNavFor: '#gallery-photos',
-        dots: false,
-        infinite: false,
-        centerMode: false,
-        focusOnSelect: true
-    });
-    gallery_photos.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-        $('.gallery-photos-item.slick-slide.active').attr('src', 'images/passive.png');
-        $($('.gallery-photos-item.slick-slide.slick-current').attr('src', 'images/active.gallery.png')).addClass('active');
-    });
     $('.gallery-photo').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
@@ -45,5 +23,11 @@ $(document).ready(function () {
             verticalFit: false
         }
     });
-
+    $("#questions-accordion").accordion();
+    $('.owl-carousel').owlCarousel({
+        center: true,
+        items:4,
+        loop:true,
+        // margin:100
+    });
 });

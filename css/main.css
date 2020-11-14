@@ -328,10 +328,13 @@
     padding: 162px 0 210px 0;
 }
 
-#page #page-paragraph {
+.middle-text {
     font-size: 18px;
     font-family: "Nunito-SemiBold", serif;
     color: rgb(44, 5, 38);
+}
+
+#page #page-paragraph {
     line-height: 1.167;
     max-width: 345px;
     padding: 20px 0 30px;
@@ -439,7 +442,7 @@
 
 #gallery {
     padding-top: 15px;
-    padding-bottom: 110px;
+    padding-bottom: 170px;
 }
 
 #gallery-text {
@@ -450,44 +453,6 @@
 #gallery #gallery-paragraph {
     max-width: 670px;
     padding: 20px 0 23px;
-}
-
-
-#gallery #gallery-photos .gallery-photo {
-    margin: 0 12px !important;
-    width: 385px !important;
-}
-
-#gallery img.arrow {
-    height: 17px;
-    cursor: pointer;
-}
-#gallery-photos-nav {
-    display: flex;
-    align-items: center;
-    margin: 30px auto 0 auto;
-    max-width: 320px;
-    justify-content: space-between;
-}
-
-#gallery-photos-nav #gallery-photos-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#gallery #gallery-photos-items .slick-track {
-    width: 300px;
-}
-#gallery .slick-track {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-#gallery-photos-items .gallery-photos-item {
-    width: 17px !important;
-    height: 17px !important;
 }
 
 #gallery-photos-items .gallery-photos-item:hover {
@@ -504,4 +469,48 @@
 #gallery .gallery-photo img:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+#gallery #gallery-photos .owl-item {
+    margin: 0 10px;
+}
+
+#questions {
+    padding-bottom: 46px;
+    background-image: url("../images/questions-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#questions #questions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#questions #questions-title {
+    width: 100%;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+#questions #questions-accordion {
+    max-width: 715px;
+}
+
+#questions #questions-form {
+    max-width: 465px;
+}
+
+#questions .questions-text {
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.2;
+}
+
+#questions .questions-text .number{
+    color: #721163;
+    font-family: "Nunito-Bold", serif;
 }
