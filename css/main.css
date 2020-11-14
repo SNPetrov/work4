@@ -455,24 +455,29 @@
     padding: 20px 0 23px;
 }
 
-#gallery-photos-items .gallery-photos-item:hover {
-    cursor: pointer;
-}
 
-#gallery .gallery-photo img{
+#gallery .gallery-photo {
     transition: transform 0.8s;
-    border-radius: 10px;
+    display: block;
     width: 385px;
     height: 295px;
+    background-size: cover;
+    border-radius: 10px;
 }
 
-#gallery .gallery-photo img:hover {
+#gallery .gallery-photo:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
+.owl-item,
+.owl-item.active.center + .owl-item.active + .owl-item.active
+{
+    opacity: 0.5;
+}
 
-#gallery #gallery-photos .owl-item {
-    margin: 0 10px;
+.owl-item.active
+{
+    opacity: 1;
 }
 
 #questions {

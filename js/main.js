@@ -16,18 +16,21 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true
     });
-    $('.gallery-photo').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        image: {
-            verticalFit: false
-        }
-    });
+    // $('.gallery-photo').magnificPopup({
+    //     type: 'image',
+    //     closeOnContentClick: true,
+    //     image: {
+    //         verticalFit: false
+    //     }
+    // });
     $("#questions-accordion").accordion();
     $('.owl-carousel').owlCarousel({
         center: true,
-        items:4,
+        items:1,
         loop:true,
-        // margin:100
+        autoWidth: true,
+        margin:20,
+        nav: true,
+        dots: false
     });
 });
