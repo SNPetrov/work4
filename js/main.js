@@ -16,30 +16,32 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true
     });
-    // $('.gallery-photo').magnificPopup({
-    //     type: 'image',
-    //     closeOnContentClick: true,
-    //     image: {
-    //         verticalFit: false
-    //     }
-    // });
+    $('.gallery-photo').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        image: {
+            verticalFit: false
+        }
+    });
     $("#questions-accordion").accordion();
     let owl = $('.owl-carousel');
     owl.owlCarousel({
         center: true,
-        items:1,
-        loop:true,
+        items: 1,
+        loop: true,
         autoWidth: true,
-        margin:20,
-        dots:false
+        margin: 20,
+        nav: false
+        // dots: true
     });
-    $('#gallery-photos-nav #prev').click(()=>{
+    $('#gallery-photos-nav .owl-prev').click(() => {
         owl.trigger('prev.owl.carousel', [300]);
     });
-    $('#gallery-photos-nav #next').click(()=>{
+    $('#gallery-photos-nav .owl-next').click(() => {
         owl.trigger('next.owl.carousel', [300]);
     });
-    owl.on('changed.owl.carousel', function(event) {
-
-    })
+    // owl.on('changed.owl.carousel', function(event) {
+    //     $('.gallery-photos-item.tempActive').attr('src', 'images/passive.png');
+    //     $($('.gallery-photos-item').attr('src', 'images/active.gallery.png')).addClass('tempActive');
+    // })
 });

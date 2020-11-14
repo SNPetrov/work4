@@ -446,7 +446,8 @@
 
 #gallery {
     padding-top: 15px;
-    padding-bottom: 170px;
+    padding-bottom: 140px;
+    position: relative;
 }
 
 #gallery-text {
@@ -483,20 +484,60 @@
     opacity: 1;
 }
 
-#gallery #gallery-photos-nav {
-    margin: 50px auto 0 auto;
+.owl-theme .owl-dots .owl-dot span {
+    border: 1px solid rgb(114, 17, 99);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 17px;
+    height: 17px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background: rgb(114, 17, 99);
+}
+
+
+#gallery .owl-nav {
     display: flex;
     width: 340px;
     justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    bottom: 33px;
 }
 
-#gallery #gallery-photos-nav > img {
+#gallery .owl-nav div {
+    position: relative;
+    z-index: 2;
+}
+
+#gallery .owl-nav.disabled {
+    display: none;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 50px;
+    /*position: relative;*/
+}
+
+.owl-theme .owl-dots .owl-dot:hover span{
+    background: none;
+}
+
+.owl-theme .owl-dots .owl-dot span:hover {
+    background: rgb(114, 17, 99);
+}
+
+.owl-theme .owl-dots .owl-dot:focus {
+outline: none !important;
+}
+
+#gallery .owl-nav img {
     height: 17px;
     width: 8px;
 }
 
-#gallery #gallery-photos-nav > img:hover {
+#gallery .owl-nav div:hover {
     cursor: pointer;
 }
 
@@ -504,6 +545,10 @@
     width: 290px;
     display: flex;
     justify-content: space-between;
+}
+
+#gallery .owl-stage {
+    padding: 20px 0;
 }
 
 #questions {
