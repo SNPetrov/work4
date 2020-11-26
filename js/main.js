@@ -14,7 +14,7 @@ $(document).ready(function () {
                 slidesToShow: 2,
                     slidesToScroll:2,
                     infinite:true,
-                    dots:true
+                    dots:true,
                 }
             },
             {
@@ -23,23 +23,13 @@ $(document).ready(function () {
                 slidesToShow: 1,
                     slidesToScroll:1,
                     infinite:true,
-                    dots:true
+                    dots:true,
+                    variableWidth: true,
+                    centerMode: true
                 }
             }
         ]
-        // asNavFor: '#info-person-numbers',
-        // nextArrow: $('#info .next-arrow'),
-        // prevArrow: $('#info .prev-arrow')
     });
-    // $('#info-person-numbers').slick({
-    //     slidesToShow: 2,
-    //     slidesToScroll: 2,
-    //     asNavFor: '#info-persons',
-    //     dots: false,
-    //     infinite: false,
-    //     centerMode: false,
-    //     focusOnSelect: true
-    // });
     $('.gallery-photo').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
@@ -48,9 +38,6 @@ $(document).ready(function () {
         }
     });
 
-    // let questions_accordion = $("#questions-accordion");
-    // questions_accordion.accordion({
-    // });
     let owl = $('.owl-carousel');
     owl.owlCarousel({
         center: true,
@@ -86,6 +73,7 @@ $(document).ready(function () {
     $('.order-btn').click(() => {
         appointment.css('display', 'flex');
     });
+    let loader =  $('#loader');
     let name = $('#name');
     let phone = $('#phone');
     let selected_ritual = $('#select-header .option');
@@ -93,9 +81,9 @@ $(document).ready(function () {
     let appointment_item = $('.appointment-item');
     $('#appointment-button .btn').click(() => {
         let ok = $.trim(selected_ritual.text())==='Выберите ритуал';
-        console.log(appointment_item.children('.appointment-item .appointment-input'));
         $('#custom-select').css('margin-bottom', '24px');
         appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
+        $('#appointment .input').css('margin-bottom', '24px');
         appointment_item.children('div.validation').css('display', 'none');
         if (!name.val()) {
             name.css('border-color', 'red');
@@ -119,17 +107,20 @@ $(document).ready(function () {
             date.siblings('div.validation').css('display', 'block');
         }
         if (date.val() && !ok && phone.val() && name.val()) {
+            loader.css('display','flex')
             $.ajax({
                 method: 'POST',
                 url: 'mail.php',
                 data: 'name=' + name.val() + '&phone' + phone.val() + '&selected_ritual=' + selected_ritual.text() + '&date' + date.val(),
                 // Функия сработает при успешном запросе(если с сервера придет код 200)
                 success: () => {
+                    loader.hide();
                     $('#appointment-sent').css('display', 'flex');
                     $('#appointment-form').hide();
                 },
                 //Функция сработает при ошибке (если с сервера вернется код ошибки)
                 error: () => {
+                    loader.hide();
                     alert('Ошибка бронирования. Свяжитесь, пожалуйста, по номеру телефона.');
                     $('#appointment').hide();
                 }
@@ -158,11 +149,19 @@ $(document).ready(function () {
     })
 
     $("#select-body .option").click(function () {
-        var currentele = $(this).html();
+        let currentele = $(this).html();
         $("#select-header .option").html(currentele);
         $(this).parents("#custom-select").removeClass("active");
         select_svg_up.css('display', 'none');
         select_svg_down.css('display', 'inline-block');
+    });
+    let custom_select = $("#custom-select");
+    $("#appointment-form, .input").click(function (e) {
+      if(custom_select.hasClass('active')&&$(this).hasClass('input')||e.target.id==='appointment-form') {
+          custom_select.removeClass("active");
+          select_svg_up.css('display', 'none');
+          select_svg_down.css('display', 'inline-block');
+      }
     });
     /////////////////////////////////////////////////////////////// custom select appointment
     let questions_validation = $('#questions-form-input .validation');
@@ -177,17 +176,20 @@ $(document).ready(function () {
             questions_validation.show();
         }
         else {
+            loader.css('display','flex');
             $.ajax({
                 method: 'POST',
                 url: 'mail1.php1',
                 data: 'phone' + questions_phone.val(),
                 // Функия сработает при успешном запросе(если с сервера придет код 200)
                 success: () => {
+                    loader.hide();
                     $('#questions-call-response').css('display', 'flex');
                     $('#questions-form').hide();
                 },
                 //Функция сработает при ошибке (если с сервера вернется код ошибки)
                 error: () => {
+                    loader.hide();
                     alert('Ошибка бронирования. Свяжитесь, пожалуйста, по номеру телефона.');
                 }
             });

@@ -307,6 +307,13 @@
     #info .slick-next {
         right: calc(50% - 63px);
     }
+
+}
+
+@media screen and (max-width: 659px) {
+    #rituals .rituals-time, #rituals .rituals-text, #rituals .rituals-title {
+        text-align: center;
+    }
 }
 
 /*580px - 767px*/
@@ -369,6 +376,9 @@
     }
     #info .slick-next {
         right: calc(50% - 108px);
+    }
+    #gallery .gallery-photo:hover {
+        transform: none;
     }
 }
 
@@ -680,6 +690,9 @@
     #gallery .gallery-photo {
         width: 270px;
         height: 230px;
+    }
+    #custom-select {
+        width: 240px;
     }
 }
 
