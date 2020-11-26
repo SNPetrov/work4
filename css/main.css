@@ -23,10 +23,11 @@
     src: url("../fonts/Nunito-Regular.ttf");
 }
 
+
 #header {
     background-image: url("../images/header-bg.png");
     font-family: "Nunito-SemiBold", serif;
-    background-size: cover;
+    height: 114px;
 }
 
 #header-container {
@@ -42,6 +43,10 @@
     width: 350px;
     display: flex;
     justify-content: space-between;
+}
+
+#header #header-menu.open {
+    display: flex !important;
 }
 
 #header-menu .menu-item {
@@ -62,20 +67,30 @@
     border-bottom: 1px solid #721163;
     color: #721163;
 }
+#closeX {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#header .logo-container {
+    margin-right: 255px;
+}
 
 .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 145px;
-    margin-left: 145px;
-    margin-right: 400px;
 }
 
 .logo {
     font-size: 55px;
     font-family: "Marguaritas-Regular", serif;
     color: rgb(67, 6, 57);
+    line-height: 0.7em;
+    margin-bottom: 10px;
 }
 
 .logo-container .logo-text {
@@ -92,14 +107,18 @@
 
 #main {
     background-image: url("../images/main-bg.png");
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    height: 860px;
+}
+#burger {
+    display: none;
+    order: 2;
 }
 
 #location {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 165px 0 280px 0;
+    padding-top: 150px;
 }
 
 #location-container {
@@ -110,7 +129,7 @@
     font-size: 36px;
     color: rgb(67, 6, 57);
     font-family: "Nunito-Bold", serif;
-    line-height: 0.95;
+    /*line-height: 0.95;*/
 }
 
 #location .logo {
@@ -137,22 +156,25 @@
 }
 
 .btn:hover {
+    color: white;
     cursor: pointer;
 }
 
 #select-program .btn {
     width: 260px;
-    padding: 18px 0;
+    padding: 17px 0;
+    line-height: 1em;
 }
 
 #advantages-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 160px;
+    position: relative;
 }
 
 #advantages-container .block-title {
     margin-bottom: 95px;
-    margin-top: 160px;
 }
 
 .block-title {
@@ -184,12 +206,8 @@
     margin-right: 190px;
 }
 
-#advantages .advantage:nth-child(4) {
-    max-width: 350px;
-}
-
 #advantages .advantage:nth-child(1) .advantage-text {
-    max-width: 276px;
+    max-width: 280px;
     margin-left: 60px;
 }
 
@@ -211,6 +229,7 @@
 #advantages .advantage .advantage-image {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
 }
 
 #advantages .advantage .advantage-text {
@@ -219,6 +238,7 @@
     font-family: "Nunito-Regular", serif;
     color: rgb(44, 5, 38);
     line-height: 1.2;
+    vertical-align: middle;
 }
 
 #advantages .advantage .advantage-image .advantage-bg {
@@ -243,16 +263,80 @@
     left: -16px;
 }
 
+#advantages-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+#advantages-wrapper #petal1 {
+    position: absolute;
+    left: 89px;
+    top: 15px;
+}
+
+#advantages-wrapper #petal2 {
+    position: absolute;
+    left: 30px;
+    top: 240px;
+}
+
+#advantages-wrapper #petal3 {
+    position: absolute;
+    right: 37px;
+    top: 125px;
+}
+
+#advantages-wrapper #petal4 {
+    position: absolute;
+    right: -14px;
+    top: 380px;
+}
+
+#rituals-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+#rituals-wrapper #petal7 {
+    position: absolute;
+    left: 233px;
+    bottom: 75px;
+    z-index: 5;
+}
+
 #rituals {
     padding-top: 120px;
     padding-bottom: 115px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+#rituals #petal5 {
+    position: absolute;
+    right: -84px;
+    top: 80px;
+}
+#rituals #petal6 {
+    position: absolute;
+    left: -445px;
+    top: 0;
+}
+
+#rituals #rituals-cards .rituals-card:last-child {
+    position: relative;
+}
+
+#rituals #lavender {
+    position: absolute;
+    right: -252px;
+    bottom: -114px;
+    pointer-events: none;
 }
 
 #rituals #rituals-text {
     margin: 30px 0 45px 0;
-    max-width: 539px;
+    max-width: 550px;
 }
 
 .block-text {
@@ -283,7 +367,7 @@
     font-size: 16px;
     font-family: "Nunito-Bold", serif;
     color: rgb(44, 5, 38);
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 }
 
 #rituals .rituals-text {
@@ -308,25 +392,48 @@
     align-items: center;
 }
 
-#rituals .rituals-price {
-}
-
 .rituals-button .btn {
     width: 130px;
-    padding: 10px 0;
+    padding: 12px 0;
     box-sizing: border-box;
+    line-height: 1em;
 }
 
 #page {
     background-color: #f5f4f3;
     background-image: url("../images/2girls.png");
     background-position: top center;
+    position: relative;
+}
+
+#page #petal15 {
+    position: absolute;
+    left: 101px;
+    top: 87px;
+}
+
+#page #petal16 {
+    position: absolute;
+    left: 2px;
+    bottom: 116px;
 }
 
 #page #page-text {
     max-width: 1200px;
     margin: 0 auto;
     padding: 162px 0 210px 0;
+    position: relative;
+}
+
+#page #small-circle {
+    position: absolute;
+    top: 0;
+    left: -360px;
+}
+#page #big-circle {
+    position: absolute;
+    top: 0;
+    left: -180px;
 }
 
 .middle-text {
@@ -346,10 +453,48 @@
     width: 232px;
 }
 
+#info-wrapper {
+    overflow: hidden;
+}
+
 #info {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 140px 0 80px 0;
+    padding: 140px 0 145px 0;
+    position: relative;
+}
+
+#info #petal8 {
+    position: absolute;
+    top: 0;
+    right: 282px;
+
+}
+#info #petal9 {
+    position: absolute;
+    top: 16px;
+    right: 250px;
+}
+#info #petal10 {
+    position: absolute;
+    top: 150px;
+    right: 5px;
+}
+#info #petal11 {
+    position: absolute;
+    top: 414px;
+    right: -125px;
+}
+#info #petal12 {
+    position: absolute;
+    bottom: 156px;
+    right: -32px;
+    z-index: 2;
+}
+#info #petal13 {
+    position: absolute;
+    bottom: 30px;
+    right: -204px;
 }
 
 #info #info-text {
@@ -357,19 +502,31 @@
     padding: 20px 0 43px;
 }
 
+.info-person {
+    width: 380px !important;
+}
+
+#info-persons {
+    display: flex;
+    justify-content: center;
+}
+
+#info-persons .info-person img {
+    margin: 0 auto;
+    width: 100%;
+}
+
 #info .info-group-persons {
     display: flex;
     justify-content: space-between;
 }
 
-#info .info-person {
-    position: relative;
-
-}
-
-#info .info-person img {
-
-}
+/*#info .info-person {*/
+/*    position: relative;*/
+/*    !*background-size: cover;*!*/
+/*    width: 385px;*/
+/*    height: 310px;*/
+/*}*/
 
 #info .info-person-text {
     background-color: rgb(255, 255, 255);
@@ -430,24 +587,65 @@
 
 .slick-track {
     display: flex;
-    width: 50px;
     justify-content: space-between;
 }
 
-#info #info-persons-nav #info-person-numbers .info-person-number.slick-current {
-    font-family: "Nunito-Bold", serif;
-    color: #721163;
-    width: 10px;
+.slick-dots {
+    bottom:  -50px;
+}
+.info-nav-item, .info-nav-item:hover{
+    font-size: 18px;
+    font-family: "Nunito-Regular", serif;
+    color: rgba(114, 17, 99, 0.702);
+    text-decoration: none;
 }
 
-.slick-slide, .slick-slide * {
+.slick-active .info-nav-item{
+    text-decoration: none;
+    font-family: "Nunito-Bold", serif;
+    color: rgb(114, 17, 99);
+    font-weight: bold;
+}
+
+#info .slick-prev, #info .slick-next {
+    top: auto;
+    bottom: -57px;
+    z-index: 2;
+}
+
+#info .slick-prev {
+    left: calc(50% - 48px);
+}
+.slick-prev:before {
+    content: url("../images/prev.png");
+}
+#info .slick-next {
+    right: calc(50% - 48px);
+}
+
+.slick-next:before {
+    content: url("../images/next.png");
+}
+
+#info .slick-slide, .slick-slide * {
     outline: none !important;
 }
 
 #gallery {
-    padding-top: 15px;
     padding-bottom: 140px;
     position: relative;
+    overflow: hidden;
+}
+
+#gallery #petal14 {
+    position: absolute;
+    top: 0px;
+    right: -94px;
+}
+#gallery #petal17 {
+    position: absolute;
+    bottom: 120px;
+    left: 198px;
 }
 
 #gallery-text {
@@ -515,12 +713,12 @@
     display: none;
 }
 
-.owl-theme .owl-nav.disabled+.owl-dots {
+.owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: 50px;
     /*position: relative;*/
 }
 
-.owl-theme .owl-dots .owl-dot:hover span{
+.owl-theme .owl-dots .owl-dot:hover span {
     background: none;
 }
 
@@ -529,10 +727,10 @@
 }
 
 .owl-theme .owl-dots .owl-dot:focus {
-outline: none !important;
+    outline: none !important;
 }
 
-#gallery .owl-nav img {
+#gallery .owl-nav img:not(img:last-child) {
     height: 17px;
     width: 8px;
 }
@@ -551,11 +749,16 @@ outline: none !important;
     padding: 20px 0;
 }
 
+
+
+#gallery #petal18 {
+    position: absolute;
+    right: -262px;
+}
 #questions {
-    padding-bottom: 46px;
     background-image: url("../images/questions-bg.png");
     background-position: center;
-    background-size: cover;
+    height: 751px;
 }
 
 #questions #questions-container {
@@ -564,30 +767,491 @@ outline: none !important;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 #questions #questions-title {
     width: 100%;
-    padding-top: 40px;
+    padding-top: 45px;
     margin-bottom: 50px;
+    line-height: 1em;
 }
 
 #questions #questions-accordion {
-    max-width: 715px;
+    width: 715px;
+    position: relative;
 }
 
-#questions #questions-form {
-    max-width: 465px;
+#questions #petal19 {
+    position: absolute;
+    top: 44px;
+    left: -220px;
 }
 
-#questions .questions-text {
+#questions #petal20 {
+    position: absolute;
+    bottom: 10px;
+    left: -346px;
+}
+
+#questions .card {
+    box-shadow: 0px 2px 9.2px 0.8px rgba(67, 6, 57, 0.12);
+    border-radius: 8px;
+    background-color: #faf7fa;
+    border-color: #faf7fa;
+    margin-bottom: 20px;
+}
+
+#questions .card-header {
+    font-size: 18px;
+    font-family: "Nunito-SemiBold", serif;
+    color: rgb(44, 5, 38);
+    outline: none;
+    border: none;
+    background-color: #faf7fa;
+    position: relative;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#questions .card-header:hover {
+    cursor: pointer;
+}
+
+#questions .card-header svg {
+    position: absolute;
+    right: 30px;
+}
+
+#questions .card-header svg.up {
+    display: none;
+}
+
+#questions .card-body {
     font-size: 14px;
     font-family: "Nunito-Regular", serif;
     color: rgb(44, 5, 38);
     line-height: 1.2;
+    border: none;
+    padding: 30px 0 0 0;
+    margin: 0 30px 30px 30px;
+    display: none;
+    border-top: 1px solid #721163;
 }
 
-#questions .questions-text .number {
+
+#questions .card-body p {
+    max-width: 560px;
+    margin-bottom: 0;
+}
+
+#questions .card.first .card-body {
+    display: block;
+}
+
+#questions .number {
     color: #721163;
     font-family: "Nunito-Bold", serif;
 }
+
+#questions #questions-call {
+    border-radius: 8px;
+    background-color: rgb(250, 247, 250);
+    box-shadow: 0 2px 9.2px 0.8px rgba(67, 6, 57, 0.12);
+    max-width: 465px;
+    padding: 0 40px;
+    height: 299px;
+    box-sizing: border-box;
+}
+
+#questions #questions-call-response {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.2;
+    text-align: center;
+    height: 100%;
+}
+
+#questions #questions-call-text {
+    max-width: 280px;
+}
+
+#questions #questions-form {
+    padding: 30px 0;
+    display: flex;
+    /*display: none;*/
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+#questions #questions-form-text {
+    color: #2c0526;
+    font-size: 18px;
+    font-family: "Nunito-Regular", serif;
+    width: 385px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+
+#questions #questions-form-input .input {
+    border: 1px solid rgb(114, 17, 99);
+    background-color: rgb(245, 239, 243);
+    width: 280px;
+    outline: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    line-height: 1rem;
+    font-size: 14px;
+    height: 44px;
+    margin-bottom: 15px;
+}
+
+#questions .validation {
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    line-height: 1em;
+}
+
+#questions ::placeholder {
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(114, 17, 99);
+}
+
+#questions #questions-form-btn {
+    position: relative;
+}
+
+.hvr-fade:active, .hvr-fade:focus {
+    background-color: #721163;
+}
+.hvr-fade:hover {
+    background-color: #860774;
+}
+
+#questions #petal21 {
+    position: absolute;
+    top: 21px;
+    right: -20px;
+}
+
+#questions #questions-form-btn .btn {
+    width: 282px;
+    height: 44px;
+    line-height: 1rem;
+}
+
+#contacts-wrapper {
+    overflow: hidden;
+}
+
+#contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 108px 0 195px 0;
+    position: relative;
+}
+#contacts-container {
+    display: flex;
+    justify-content: space-between;
+}
+#contacts #petal22 {
+    position: absolute;
+    top: 16px;
+    right: 4px;
+}
+
+#contacts #petal23 {
+    position: absolute;
+    right: -135px;
+    top: 250px;
+}
+#contacts #petal24 {
+    position: absolute;
+    bottom: 185px;
+    right: -107px;
+}
+
+#contacts #contacts-text {
+    max-width: 385px;
+    position: relative;
+}
+
+#contacts #contacts-text #lavender-bottom {
+    bottom: -160px;
+    left: -152px;
+    position: absolute;
+}
+
+#contacts .block-title {
+    line-height: 1em;
+    margin-bottom: 55px;
+}
+
+/*#contacts #contacts-feature*/
+#contacts .contacts-title {
+    font-size: 20px;
+    font-family: "Nunito-SemiBold", serif;
+    color: rgb(44, 5, 38);
+    margin-bottom: 10px;
+}
+
+#contacts .contacts-paragraph {
+    font-size: 16px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    max-width: 220px;
+    margin-bottom: 14px;
+    line-height: 1em;
+}
+
+#contacts-features {
+    margin-left: 100px;
+}
+
+#contacts .contact-feature:first-child {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+#contacts #contacts-map iframe {
+    border-radius: 10px;
+    border: 0;
+    width: 790px;
+    height: 420px;
+    padding-top: 3px;
+}
+
+#footer {
+    background-color: #faf7fa;
+}
+
+#footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 0;
+}
+
+#footer .logo-container {
+    margin-left: 205px;
+}
+
+#footer #footer-icons {
+    width: 216px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer #footer-icons a svg:hover {
+    fill: #721163;
+    filter: drop-shadow(-6px 7px 16px #721163);
+}
+
+#footer #footer-info {
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#footer #footer-time {
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+}
+
+#footer .number {
+    font-size: 16px;
+}
+
+#appointment {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #00000080;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+#appointment #close svg {
+    pointer-events: none;
+}
+
+#appointment #appointment-container {
+    border-radius: 15px;
+    background-color: rgb(250, 247, 250);
+    position: relative;
+}
+
+#appointment #appointment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 428px;
+    padding: 60px 0;
+}
+
+#appointment #appointment-container #close {
+    width: 50px;
+    height: 50px;
+    background: #cec9cd;
+    border-radius: 50%;
+    position: absolute;
+    right: -66px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#appointment #appointment-container #close:hover {
+    cursor: pointer;
+}
+
+#appointment #appointment-container .input {
+    width: 305px;
+    margin-bottom: 24px;
+    outline: none;
+    border: 1px solid rgb(114, 17, 99);
+    background-color: rgb(250, 247, 250);
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    line-height: 1rem;
+    height: 44px;
+    color: rgb(44, 5, 38);
+    font-size: 14px;
+    /*appearance: none;*/
+    font-family: "Nunito-Regular", serif;
+}
+
+
+#custom-select {
+    width: 305px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+#select-header {
+    border: 1px solid rgb(114, 17, 99);
+    background-color: rgb(250, 247, 250);
+    padding: 9px 20px 0 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    height: 44px;
+    cursor: pointer;
+    position: relative;
+}
+#select-body {
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid rgb(114, 17, 99);
+    background-color: rgb(250, 247, 250);
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+
+.option {
+    color: rgb(44, 5, 38);
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+#select-body .option:hover {
+    color: rgb(176, 66, 159);
+}
+
+#custom-select.active #select-body {
+    display: flex;
+}
+#custom-select #select-header svg {
+    position: absolute;
+    right: 18px;
+    top: 13px;
+}
+
+#custom-select #select-header svg.up {
+    display: none;
+}
+
+
+#appointment  ::placeholder {
+    font-size: 14px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+}
+
+
+#appointment #appointment-button {
+    margin-top: 40px;
+}
+
+#appointment #appointment-button .btn {
+    width: 196px;
+    line-height: 1em;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+.validation {
+    font-family: "Nunito-Bold", serif;
+    display: none;
+    color: red;
+    font-size: 12px;
+    line-height: 24px;
+    padding-left: 22px;
+}
+
+#appointment #appointment-sent{
+    width: 532px;
+    height: 472px;
+    box-sizing: border-box;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#appointment #appointment-sent-title {
+    font-size: 20px;
+    font-family: "Nunito-Bold", serif;
+    color: rgb(114, 17, 99);
+    line-height: 1em;
+    margin-bottom: 27px;
+}
+
+#appointment #appointment-sent-text {
+    font-size: 18px;
+    font-family: "Nunito-Regular", serif;
+    color: rgb(44, 5, 38);
+    line-height: 1.2;
+    max-width: 280px;
+    text-align: center;
+}
+
+
+

@@ -188,6 +188,10 @@ select { /* 1 */
   text-transform: none;
 }
 
+.btn:focus, .btn:active {
+  box-shadow: none !important;
+}
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
@@ -219,7 +223,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  /*outline: 1px dotted ButtonText;*/
 }
 
 /**

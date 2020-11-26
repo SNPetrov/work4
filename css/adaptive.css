@@ -1,0 +1,699 @@
+@media screen and (min-width: 2120px) {
+    #gallery #petal14 {
+        right: -94px !important;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    #main {
+        background-size: 100%;
+    }
+
+    #page {
+        background-repeat: no-repeat;
+    }
+
+    #questions {
+        background-size: 100%;
+    }
+
+    #gallery {
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    #gallery #petal14 {
+        right: 0;
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    #rituals #lavender {
+        right: -180px;
+    }
+
+    #gallery .gallery-photo {
+        width: 350px;
+    }
+}
+
+/*1024px - 1229px*/
+@media screen and (max-width: 1229px) {
+    #header-container, #location, #advantages-container, #rituals, #page, #info, #gallery-text, #questions-container, #contacts, #footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #advantages .advantage:nth-child(1) {
+        margin-right: 134px;
+    }
+
+    #advantages .advantage:nth-child(3) {
+        margin-left: 90px;
+        margin-right: 116px;
+    }
+
+    #rituals {
+        padding-bottom: 50px;
+    }
+
+    #rituals #rituals-container {
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    #rituals #rituals-cards {
+        flex-wrap: wrap;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    #rituals .rituals-card {
+        margin-bottom: 65px;
+    }
+
+    #rituals #lavender {
+        /*right: 0;*/
+    }
+
+    .owl-item.active.center + .owl-item.active {
+        opacity: 0.5;
+    }
+
+    #questions #questions-container, #contacts {
+        max-width: 1030px;
+    }
+
+    #questions #questions-accordion {
+        width: 550px;
+    }
+
+    #questions .card-header {
+        font-size: 16px;
+    }
+
+    #questions #questions-call {
+        padding: 0 30px;
+    }
+
+    #questions #questions-form-text {
+        font-size: 16px;
+        width: 342px;
+    }
+
+    #questions #questions-call .number {
+        font-size: 16px;
+    }
+
+    #contacts #contacts-map iframe {
+        width: 600px;
+    }
+
+    #footer .logo-container {
+        margin-left: 130px;
+    }
+
+    #footer #footer-info {
+        width: 370px;
+        justify-content: space-around;
+    }
+
+    #footer #footer-time {
+        font-size: 13px;
+    }
+
+    #footer .number {
+        font-size: 14px;
+    }
+
+    #gallery .gallery-photo {
+        width: 450px;
+    }
+
+    .info-person {
+        width: 315px !important;
+    }
+
+}
+
+
+/*768px - 1023px*/
+@media screen and (max-width: 1023px) {
+
+    #header #header-menu {
+        width: 270px;
+    }
+
+    #header .logo-container {
+        margin-right: 120px;
+    }
+
+    .logo {
+        font-size: 52px;
+    }
+
+    #header .number {
+        /*margin-right: 50px;*/
+    }
+
+    #location-container {
+        max-width: 442px;
+    }
+
+    #location #location-title {
+        font-size: 33px;
+    }
+
+    #location #location-text {
+        font-size: 18px;
+    }
+
+    #advantages-container .block-title {
+        text-align: center;
+    }
+
+    #advantages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #advantages .advantage:nth-child(1) {
+        margin-right: 0;
+        margin-left: 12px;
+    }
+
+    #advantages .advantage:nth-child(2) {
+        margin-left: 31px;
+    }
+
+    #advantages .advantage:nth-child(3) {
+        margin-left: 21px;
+        margin-right: 0;
+    }
+
+    #advantages .advantage:nth-child(4) {
+        margin-left: 16px;
+        max-width: none;
+        width: 421px;
+    }
+
+    #info .info-person-text {
+        width: 230px;
+        height: 62px;
+        /*bottom: 50px;*/
+        justify-content: space-evenly;
+    }
+    #info .info-person-name {
+        font-size: 16px;
+    }
+    #info .info-person-experience{
+        font-size: 12px;
+    }
+    .slick-slide {
+        /*width: 340px;*/
+    }
+
+    #contacts {
+        max-width: 800px;
+    }
+
+    #contacts #contacts-map iframe {
+        width: 400px;
+    }
+
+    #contacts .contacts-title {
+        font-size: 18px;
+    }
+
+    #contacts-features {
+        margin-left: 70px;
+    }
+
+    #contacts #contacts-text #lavender-bottom {
+        left: -163px;
+    }
+
+    #footer .logo-container {
+        margin-left: 0;
+        margin-right: 40px;
+    }
+
+    #footer #footer-info {
+        flex-wrap: wrap;
+        width: 161px;
+    }
+
+    #questions {
+        height: inherit;
+        padding-bottom: 50px;
+    }
+
+    #questions #questions-container {
+        max-width: 700px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #questions #questions-title {
+        width: inherit;
+    }
+
+    #questions #questions-call {
+        max-width: none;
+        width: 100%;
+    }
+
+    #questions #questions-accordion {
+        width: 100%;
+    }
+
+    #info .block-title {
+        text-align: center;
+    }
+
+    #info #info-text {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #gallery .block-title {
+        text-align: center;
+    }
+
+    #rituals .block-title {
+        text-align: center;
+    }
+
+
+    #gallery #gallery-paragraph {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #rituals #rituals-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info-person {
+        width: 340px !important;
+    }
+
+    #info .slick-prev {
+        left: calc(50% - 63px);
+    }
+    #info .slick-next {
+        right: calc(50% - 63px);
+    }
+}
+
+/*580px - 767px*/
+@media screen and (max-width: 767px) {
+    #petal14 {
+        z-index: -1;
+    }
+
+    #header .number {
+        display: none;
+    }
+
+    #header-container {
+        justify-content: space-evenly;
+    }
+
+    #header .logo-container {
+        margin-right: 0;
+        order: 1;
+    }
+
+    #header #header-menu {
+        order: 2;
+    }
+
+    #rituals #rituals-cards {
+        justify-content: center;
+    }
+
+    #rituals .rituals-card {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+
+    #contacts #contacts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacts .block-title {
+        text-align: center;
+    }
+
+    #contacts #contacts-text {
+        order: 2;
+        margin-top: 30px;
+    }
+
+    #rituals #rituals-text {
+        max-width: 410px;
+        font-size: 14px;
+    }
+
+    #footer #footer-icons {
+        width: 190px;
+    }
+    #info .slick-prev {
+        left: calc(50% - 108px);
+    }
+    #info .slick-next {
+        right: calc(50% - 108px);
+    }
+}
+
+/*425px - 579px*/
+@media screen and (max-width: 579px) {
+    #petal3 {
+        z-index: -1;
+    }
+
+    #page #big-circle {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+    }
+
+    #burger:hover {
+        cursor: pointer;
+    }
+
+    #header #header-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        padding-top: 50px;
+        color: rgb(119, 11, 29);
+        justify-content: normal;
+    }
+
+    #closeX {
+        display: block;
+    }
+
+    #header-menu .menu-item {
+        color: rgb(119, 109, 163);
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    #location #location-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    #location #location-text {
+        text-align: center;
+    }
+
+    #location #select-program {
+        text-align: center;
+    }
+
+    #advantages .advantage:nth-child(1) .advantage-text {
+        margin-left: 30px;
+    }
+
+    #advantages .advantage:nth-child(2) .advantage-text {
+        margin-left: 35px;
+    }
+
+    #advantages .advantage:nth-child(3) .advantage-text {
+        margin-left: 30px;
+    }
+
+    #advantages .advantage:nth-child(4) .advantage-text {
+        margin-left: 18px;
+        max-width: 290px;
+    }
+
+    #advantages .advantage:nth-child(4) {
+        margin-left: 50px;
+        max-width: 420px;
+    }
+
+    #advantages .advantage .advantage-text {
+        font-size: 13px;
+    }
+
+    #page #page-text {
+        padding-top: 163px;
+    }
+
+    #page .block-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #page #page-paragraph {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #page-btn {
+        text-align: center;
+    }
+
+    #questions-title {
+        text-align: center;
+    }
+
+    #questions .card-header {
+        font-size: 14px;
+    }
+
+    #questions #questions-form-text {
+        font-size: 14px;
+    }
+
+    #questions #questions-call .number {
+        font-size: 15px;
+    }
+
+    .block-title {
+        font-size: 25px;
+    }
+
+    #footer-container {
+        flex-direction: column;
+    }
+
+    #footer .logo-container {
+        order: 1;
+        margin-right: 0;
+    }
+
+    #footer #footer-info {
+        order: 2;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #footer #footer-icons {
+        order: 3;
+    }
+
+    #appointment #appointment-container #close {
+        right: 10px;
+        top: 10px;
+    }
+
+    #appointment #appointment-form {
+        width: 380px;
+    }
+
+    #appointment #appointment-sent {
+        width: 400px;
+        height: 350px;
+    }
+
+    #gallery .gallery-photo {
+        width: 330px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #advantages .advantage {
+        width: 300px !important;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #advantages .advantage:nth-child(1) {
+        margin-left: 25px;
+    }
+
+    #advantages .advantage:nth-child(2) {
+        margin-left: 42px;
+    }
+
+    #advantages .advantage:nth-child(3) {
+        margin-left: 27px;
+    }
+
+    #advantages .advantage:nth-child(4) {
+        margin-left: 10px;
+    }
+
+    #advantages .advantage .advantage-text {
+        max-width: 160px !important;
+        font-size: 12px;
+    }
+}
+
+/*360px-424px*/
+@media screen and (max-width: 424px) {
+    #page .block-title {
+        margin-bottom: 23px;
+        font-size: 23px;
+    }
+
+    #page .middle-text {
+        font-size: 16px;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 15px;
+        height: 15px;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    #gallery .owl-nav {
+        width: 280px;
+    }
+
+    #contacts #contacts-map iframe {
+        width: 300px;
+    }
+
+    #questions #questions-form-text {
+        font-size: 12px;
+        width: 220px;
+    }
+
+    #questions .card-header {
+        font-size: 15px;
+    }
+
+    #questions .card-body {
+        font-size: 13px;
+    }
+
+    #questions #questions-form-btn .btn, #questions #questions-form-input .input {
+        width: 230px;
+    }
+
+    #questions .card-header svg {
+        top: 35px;
+        right: 10px;
+    }
+
+    #contacts {
+        padding-top: 70px;
+    }
+
+    #contacts .contacts-paragraph {
+        line-height: 1.2;
+        font-size: 14px;
+    }
+
+    #contacts .contacts-title {
+        font-size: 16px;
+    }
+
+    #contacts .contact-feature:first-child {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    #appointment #appointment-container #close {
+        top: 4px;
+    }
+
+    #appointment #appointment-form {
+        width: 280px;
+    }
+
+    .validation {
+        font-size: 11px;
+    }
+
+    #appointment #appointment-container .input {
+        width: 240px;
+    }
+
+    #appointment #appointment-button {
+        margin-top: 10px;
+    }
+
+    #appointment #appointment-sent {
+        width: 280px;
+        height: 250px;
+    }
+
+    #appointment #appointment-sent-title {
+        font-size: 18px;
+    }
+
+    #appointment #appointment-sent-text {
+        font-size: 15px;
+        max-width: 260px;
+    }
+
+    #questions #questions-call-response {
+        font-size: 16px;
+    }
+
+    #info {
+        padding: 100px 0 100px 0;
+    }
+
+    #gallery {
+        padding-bottom: 60px;
+    }
+
+    #gallery .gallery-photo {
+        width: 270px;
+        height: 230px;
+    }
+}
+
+/*320px - 360px*/
+@media screen and (max-width: 359px) {
+    .info-person {
+        width: 300px !important;
+    }
+    #gallery .gallery-photo {
+        width: 230px;
+        height: 180px;
+    }
+
+    .block-text {
+        font-size: 15px;
+    }
+}
