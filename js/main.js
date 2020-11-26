@@ -201,7 +201,7 @@ $(document).ready(function () {
     $('#header-menu > *').click(()=> {
         $('#header-menu.open').removeClass('open');
     })
-    // new WOW().init({
-    //     animateClass: 'animate-animated'
-    // });
+    new WOW().init({
+        animateClass: 'animate-animated'
+    });
 });
