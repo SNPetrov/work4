@@ -79,7 +79,22 @@ $(document).ready(function () {
     // Всплывающее окно заказа
     //
     let appointment = $('#appointment');
-    $('.order-btn').click(() => {
+    $('.order-btn').click((e) => {
+        if(e.target.id==='massage-1') {
+            $("#select-header .option").text('Массаж камнями');
+        }
+        else if(e.target.id==='massage-2') {
+            $("#select-header .option").text('Баллийский массаж');
+        }
+        else if(e.target.id==='massage-3') {
+            $("#select-header .option").text('С травяными мешочками');
+        }
+        else if(e.target.id==='massage-4') {
+            $("#select-header .option").text('Антицеллюлитный массаж');
+        }
+        else {
+            $("#select-header .option").text('Выберите ритуал');
+        }
         appointment.css('display', 'flex');
     });
     let loader =  $('#loader');
@@ -88,7 +103,8 @@ $(document).ready(function () {
     let selected_ritual = $('#select-header .option');
     let date = $('#date');
     let appointment_item = $('.appointment-item');
-    $('#appointment-button .btn').click(() => {
+    $('#appointment-button .btn').click( () => {
+
         let ok = $.trim(selected_ritual.text())==='Выберите ритуал';
         $('#custom-select').css('margin-bottom', '24px');
         appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
