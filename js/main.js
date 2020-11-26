@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    //
+    // Первый слайдер ( мастера)
+    //
     $('#info-persons').slick({
         infinite: true,
         slidesToShow: 3,
@@ -30,6 +33,9 @@ $(document).ready(function () {
             }
         ]
     });
+    //
+    //Второй слайдер (Галерея)
+    //
     $('.gallery-photo').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
@@ -37,7 +43,6 @@ $(document).ready(function () {
             verticalFit: false
         }
     });
-
     let owl = $('.owl-carousel');
     owl.owlCarousel({
         center: true,
@@ -53,10 +58,11 @@ $(document).ready(function () {
     $('#gallery-photos-nav .owl-next').click(() => {
         owl.trigger('next.owl.carousel', [300]);
     });
-    // Аккордеон
+    //
+    // Аккордеон (FAQ)
+    //
     $('.card-header').click(function () {
         if ($(this).next('.card-body').hasClass('active')) {
-            console.log(5);
             $(this).next('.card-body').removeClass('active').slideUp();
             $(this).children('svg.down').css('display', 'inline-block');
             $(this).children('svg.up').css('display', 'none');
@@ -69,6 +75,9 @@ $(document).ready(function () {
             $(this).children('svg.up').css('display', 'inline-block');
         }
     });
+    //
+    // Всплывающее окно заказа
+    //
     let appointment = $('#appointment');
     $('.order-btn').click(() => {
         appointment.css('display', 'flex');
@@ -98,7 +107,6 @@ $(document).ready(function () {
         if (ok) {
             selected_ritual.parent().css('border-color', 'red');
             selected_ritual.parents('#custom-select').css('margin-bottom', '0');
-            // selected_ritual.parent().css('margin-bottom', '0');
             $('#custom-select .validation').css('display', 'block');
         }
         if (!date.val()) {
@@ -132,7 +140,7 @@ $(document).ready(function () {
         appointment.hide();
         }
     });
-    ///////////////////////////////////// custom select appointment
+    ///////////////////////////////////////////////// custom select appointment
     let select_svg_up = $('#custom-select #select-header svg.up');
     let select_svg_down = $('#custom-select #select-header svg.down');
     $("#select-header").click(function () {
@@ -164,6 +172,9 @@ $(document).ready(function () {
       }
     });
     /////////////////////////////////////////////////////////////// custom select appointment
+    //
+    //Работа с отправкой номера телефона
+    //
     let questions_validation = $('#questions-form-input .validation');
     let questions_phone = $('#questions-phone');
     $('#questions-form-btn .btn').click(() => {
@@ -195,12 +206,18 @@ $(document).ready(function () {
             });
         }
     });
+    //
+    //Работа с меню на мобильных устройствах
+    //
     $('#burger').click(()=> {
         $('#header-menu').addClass('open');
     })
     $('#header-menu > *').click(()=> {
         $('#header-menu.open').removeClass('open');
     })
+    //
+    //Подключение библиотеки wow
+    //
     new WOW().init({
         animateClass: 'animate-animated'
     });

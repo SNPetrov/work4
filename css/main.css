@@ -479,6 +479,7 @@
     position: absolute;
     top: 150px;
     right: 5px;
+    z-index: -1;
 }
 #info #petal11 {
     position: absolute;
@@ -899,6 +900,9 @@
     margin-bottom: 28px;
 }
 
+br#questions-caret {
+    display: none;
+}
 
 #questions #questions-form-input .input {
     border: 1px solid rgb(114, 17, 99);

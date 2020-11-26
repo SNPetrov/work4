@@ -499,6 +499,7 @@
 
     #questions #questions-form-text {
         font-size: 14px;
+        text-indent: 15px;
     }
 
     #questions #questions-call .number {
@@ -542,9 +543,37 @@
         height: 350px;
     }
 
+    #gallery {
+        padding-bottom: 40px;
+    }
+
     #gallery .gallery-photo {
         width: 330px;
         height: 250px;
+    }
+    #questions-form-text br{
+        display: none;
+    }
+    br#questions-caret {
+        display: block;
+    }
+    #info {
+        padding: 100px 20px;
+    }
+    div#rituals {
+        padding-top: 60px;
+    }
+
+    #rituals .rituals-card {
+        margin-bottom: 30px;
+    }
+
+    #contacts {
+        padding-top: 50px;
+        padding-bottom: 150px;
+    }
+    #contacts .block-title {
+        margin-bottom: 30px;
     }
 }
 
@@ -685,10 +714,6 @@
         font-size: 16px;
     }
 
-    #info {
-        padding: 100px 0 100px 0;
-    }
-
     #gallery {
         padding-bottom: 60px;
     }
@@ -699,6 +724,15 @@
     }
     #custom-select {
         width: 240px;
+    }
+    #questions #questions-form-text {
+        text-indent: 15px;
+    }
+    #questions #questions-call .number {
+        font-size: 13px;
+    }
+    br#questions-caret {
+        display: none;
     }
 }
 
