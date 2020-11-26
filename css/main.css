@@ -23,6 +23,9 @@
     src: url("../fonts/Nunito-Regular.ttf");
 }
 
+html {
+    scroll-behavior:smooth;
+}
 
 #header {
     background-image: url("../images/header-bg.png");
@@ -43,6 +46,10 @@
     width: 350px;
     display: flex;
     justify-content: space-between;
+}
+
+#header #header-menu a {
+    scroll-behavior: smooth;
 }
 
 #header #header-menu.open {
@@ -460,7 +467,7 @@
 #info {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 140px 0 145px 0;
+    padding: 140px 0 100px 0;
     position: relative;
 }
 
@@ -633,6 +640,7 @@
 }
 
 #gallery {
+    padding-top: 68px;
     padding-bottom: 140px;
     position: relative;
     overflow: hidden;
@@ -640,7 +648,7 @@
 
 #gallery #petal14 {
     position: absolute;
-    top: 0px;
+    top: 68px;
     right: -94px;
 }
 #gallery #petal17 {

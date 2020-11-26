@@ -558,7 +558,7 @@
         display: block;
     }
     #info {
-        padding: 100px 20px;
+        padding: 60px 20px 40px 20px;
     }
     div#rituals {
         padding-top: 60px;
@@ -575,6 +575,11 @@
     #contacts .block-title {
         margin-bottom: 30px;
     }
+    #rituals-wrapper #petal7 {
+        left: 100px;
+        bottom: 37px;
+    }
+
 }
 
 @media screen and (max-width: 440px) {
