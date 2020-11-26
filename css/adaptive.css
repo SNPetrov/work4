@@ -380,6 +380,12 @@
     #gallery .gallery-photo:hover {
         transform: none;
     }
+    #contacts-second {
+        display: block;
+    }
+    #contacts-first {
+        display: none;
+    }
 }
 
 /*425px - 579px*/
