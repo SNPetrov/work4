@@ -91,10 +91,12 @@ html {
     align-items: center;
     max-width: 145px;
     text-decoration: none;
+    color: inherit;
 }
 
 .logo-container:hover {
     text-decoration: none;
+    color: inherit;
 }
 
 .logo {
