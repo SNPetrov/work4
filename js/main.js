@@ -99,6 +99,8 @@ $(document).ready(function () {
             $("#select-header .option").text('Выберите ритуал');
         }
         custom_select.css('margin-bottom', '24px').removeClass('active');
+        select_svg_down.css('display', 'inline-block');
+        select_svg_up.css('display', 'none');
         appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
         appointment_input.css('margin-bottom', '24px');
         appointment_input.val('');
