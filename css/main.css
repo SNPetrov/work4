@@ -91,12 +91,10 @@ html {
     align-items: center;
     max-width: 145px;
     text-decoration: none !important;
-    color: rgb(67, 6, 57);
 }
 
 .logo-container:hover {
-    text-decoration: none;
-    color: rgb(67, 6, 57);
+    text-decoration: none !important;
 }
 
 .logo {
