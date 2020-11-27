@@ -80,7 +80,8 @@ $(document).ready(function () {
     //
     let appointment_item = $('.appointment-item');
     let appointment = $('#appointment');
-    let appointment_input = $('#appointment .input')
+    let appointment_input = $('#appointment .input');
+    let custom_select = $('#custom-select');
     $('.order-btn').click((e) => {
         if(e.target.id==='massage-1') {
             $("#select-header .option").text('Массаж камнями');
@@ -97,7 +98,7 @@ $(document).ready(function () {
         else {
             $("#select-header .option").text('Выберите ритуал');
         }
-        $('#custom-select').css('margin-bottom', '24px');
+        custom_select.css('margin-bottom', '24px').removeClass('active');
         appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
         appointment_input.css('margin-bottom', '24px');
         appointment_input.val('');
@@ -111,7 +112,7 @@ $(document).ready(function () {
     let date = $('#date');
     $('#appointment-button .btn').click( () => {
         let ok = $.trim(selected_ritual.text())==='Выберите ритуал';
-        $('#custom-select').css('margin-bottom', '24px');
+        custom_select.css('margin-bottom', '24px');
         appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
         appointment_input.css('margin-bottom', '24px');
         appointment_item.children('div.validation').css('display', 'none');
@@ -184,7 +185,6 @@ $(document).ready(function () {
         select_svg_up.css('display', 'none');
         select_svg_down.css('display', 'inline-block');
     });
-    let custom_select = $("#custom-select");
     $("#appointment-form, .input").click(function (e) {
       if(custom_select.hasClass('active')&&$(this).hasClass('input')||e.target.id==='appointment-form') {
           custom_select.removeClass("active");
