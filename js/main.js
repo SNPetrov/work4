@@ -136,7 +136,7 @@ $(document).ready(function () {
             date.siblings('div.validation').css('display', 'block');
         }
         if (date.val() && !ok && phone.val() && name.val()) {
-            loader.css('display','flex')
+            loader.css('display','flex');
             $.ajax({
                 method: 'POST',
                 url: 'mail.php',
