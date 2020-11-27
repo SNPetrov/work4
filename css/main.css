@@ -90,13 +90,13 @@ html {
     flex-direction: column;
     align-items: center;
     max-width: 145px;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: rgb(67, 6, 57);
 }
 
 .logo-container:hover {
     text-decoration: none;
-    color: inherit;
+    color: rgb(67, 6, 57);
 }
 
 .logo {
