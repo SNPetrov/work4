@@ -78,7 +78,9 @@ $(document).ready(function () {
     //
     // Всплывающее окно заказа
     //
+    let appointment_item = $('.appointment-item');
     let appointment = $('#appointment');
+    let appointment_input = $('#appointment .input')
     $('.order-btn').click((e) => {
         if(e.target.id==='massage-1') {
             $("#select-header .option").text('Массаж камнями');
@@ -95,6 +97,11 @@ $(document).ready(function () {
         else {
             $("#select-header .option").text('Выберите ритуал');
         }
+        $('#custom-select').css('margin-bottom', '24px');
+        appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
+        appointment_input.css('margin-bottom', '24px');
+        appointment_input.val('');
+        appointment_item.children('div.validation').css('display', 'none');
         appointment.css('display', 'flex');
     });
     let loader =  $('#loader');
@@ -102,13 +109,11 @@ $(document).ready(function () {
     let phone = $('#phone');
     let selected_ritual = $('#select-header .option');
     let date = $('#date');
-    let appointment_item = $('.appointment-item');
     $('#appointment-button .btn').click( () => {
-
         let ok = $.trim(selected_ritual.text())==='Выберите ритуал';
         $('#custom-select').css('margin-bottom', '24px');
         appointment_item.children('.appointment-item .appointment-input').css('border-color', 'rgb(114, 17, 99)');
-        $('#appointment .input').css('margin-bottom', '24px');
+        appointment_input.css('margin-bottom', '24px');
         appointment_item.children('div.validation').css('display', 'none');
         if (!name.val()) {
             name.css('border-color', 'red');
