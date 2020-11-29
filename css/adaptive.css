@@ -446,24 +446,24 @@
     }
 
     #advantages .advantage:nth-child(1) .advantage-text {
-        margin-left: 30px;
+        margin-left: 40px;
     }
 
     #advantages .advantage:nth-child(2) .advantage-text {
-        margin-left: 35px;
+        margin-left: 45px;
     }
 
     #advantages .advantage:nth-child(3) .advantage-text {
-        margin-left: 30px;
+        margin-left: 40px;
     }
 
     #advantages .advantage:nth-child(4) .advantage-text {
-        margin-left: 18px;
+        margin-left: 28px;
         max-width: 290px;
     }
 
     #advantages .advantage:nth-child(4) {
-        margin-left: 50px;
+        margin-left: 40px;
         max-width: 420px;
     }
 

@@ -143,7 +143,7 @@ $(document).ready(function () {
             $.ajax({
                 method: 'POST',
                 url: 'mail.php',
-                data: 'name=' + name.val() + '&phone' + phone.val() + '&selected_ritual=' + selected_ritual.text() + '&date' + date.val(),
+                data: 'name=' + name.val() + '&phone=' + phone.val() + '&selected_ritual=' + selected_ritual.text() + '&date=' + date.val(),
                 // Функия сработает при успешном запросе(если с сервера придет код 200)
                 success: () => {
                     loader.hide();
@@ -214,7 +214,7 @@ $(document).ready(function () {
             $.ajax({
                 method: 'POST',
                 url: 'mail1.php1',
-                data: 'phone' + questions_phone.val(),
+                data: 'phone=' + questions_phone.val(),
                 // Функия сработает при успешном запросе(если с сервера придет код 200)
                 success: () => {
                     loader.hide();
